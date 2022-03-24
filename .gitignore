@@ -1,0 +1,6 @@
+.idea/
+node_modules/
+
+example/dist/main.js
+example/node_modules/
+example/yarn.lock

@@ -1,0 +1,36 @@
+{
+  "name": "react-js-calendar",
+  "version": "1.0.5",
+  "description": "",
+  "author": "trukhachev-b",
+  "license": "ISC",
+  "main": "dist/index.js",
+  "module": "dist/index.es.js",
+  "source": "src/index.js",
+  "files": [
+    "dist"
+  ],
+  "type": "module",
+  "scripts": {
+    "test": "cross-env NODE_OPTIONS=--experimental-vm-modules jest",
+    "build": "rollup -c",
+    "watch": "rollup -c -w",
+    "prepublishOnly": "yarn build"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.16.0",
+    "@babel/preset-env": "^7.16.0",
+    "@babel/preset-react": "^7.16.0",
+    "@rollup/plugin-babel": "^5.3.0",
+    "@rollup/plugin-commonjs": "^21.0.1",
+    "@rollup/plugin-node-resolve": "^13.0.6",
+    "cross-env": "^7.0.3",
+    "jest": "^27.4.7",
+    "react": "^17.0.2",
+    "rollup": "^2.59.0",
+    "rollup-plugin-peer-deps-external": "^2.2.4"
+  },
+  "peerDependencies": {
+    "react": ">=16.8.0"
+  }
+}
