@@ -1,4 +1,4 @@
-import { getKeyMonth } from './Utils';
+import { getKeyMonth, padZero } from './Utils';
 import MonthStructure from './MonthStructure';
 
 export const dataProcessing = (data) => {
@@ -69,7 +69,7 @@ export const generateArrMonth = (data) => {
                 endM = lastMonth;
             }
             for (let m = startM; m <= endM; m++) {
-                month.push(`${ y }-${ m }-1`);
+                month.push(`${ y }-${ padZero(m) }-01`);
             }
         }
     } else {

@@ -157,6 +157,9 @@ function getKeyMonth(currentYear, date) {
 
   return keyMonth;
 }
+function padZero(val) {
+  return String(val).length === 1 ? "0".concat(val) : val;
+}
 
 var DAY_STATE_NOT_AVAILABLE = 'not_available';
 var DAY_STATE_DISABLE = 'disable';
@@ -317,7 +320,7 @@ var generateArrMonth = function generateArrMonth(data) {
       }
 
       for (var m = startM; m <= endM; m++) {
-        month.push("".concat(y, "-").concat(m, "-1"));
+        month.push("".concat(y, "-").concat(padZero(m), "-01"));
       }
     }
   } else {

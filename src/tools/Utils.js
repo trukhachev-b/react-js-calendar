@@ -38,3 +38,7 @@ export function getKeyMonth(currentYear, date) {
     }
     return keyMonth;
 }
+
+export function padZero(val) {
+    return String(val).length === 1 ? `0${ val }` : val;
+}
